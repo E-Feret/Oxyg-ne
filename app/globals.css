@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+
+  /* Official Oxygène Colors */
+  --color-oxy-orange: #FE5423;
+  --color-oxy-blue: #16318B;
+  --color-oxy-grad-blue-start: #274BBB;
+  --color-oxy-grad-blue-end: #A6DBEB;
+  --color-oxy-grad-red-start: #DB554D;
+  --color-oxy-grad-pink-end: #C95AB8;
+
+  /* Mapping to semantic names */
+  --color-primary: var(--color-oxy-orange);
+  --color-secondary: var(--color-oxy-blue);
+  --color-accent: var(--color-oxy-grad-blue-start);
+  --color-background-page: #f8fafc;
+}
+
+@utility bg-gradient-oxy-blue {
+  background-image: linear-gradient(to right, var(--color-oxy-grad-blue-start), var(--color-oxy-grad-blue-end));
+}
+
+@utility bg-gradient-oxy-warm {
+  background-image: linear-gradient(to right, var(--color-oxy-grad-red-start), var(--color-oxy-grad-pink-end));
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+  }
+}
+
+body {
+  background-image: url('/assets/fond/fond.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #16318B;
+  /* oxy-blue */
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #16318B;
+  /* oxy-blue */
+}
